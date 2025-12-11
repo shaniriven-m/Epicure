@@ -9,6 +9,7 @@
 @theme {
   --color-primary: #000000;
   --color-primary-100: #979797;
+  --color-primary-200: #F2F2F2;
   --color-secondary-100: #F9F4EA;
   --color-secondary-200: #E19D1A;
   --color-secondary-300: #FAFAFA;
@@ -46,6 +47,10 @@
 
 @layer components {
   .text-header {
+    @apply text-[18px] font-extralight text-primary;
+  }
+
+  .text-footer {
     @apply text-[18px] font-extralight text-primary;
   }
 }
