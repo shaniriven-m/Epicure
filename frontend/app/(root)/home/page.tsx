@@ -1,5 +1,5 @@
 import { fetchRestaurants } from "@/lib/api/restaurants";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/card";
 import { CardProps } from "@/types/card";
 
 const HomePage = async () => {

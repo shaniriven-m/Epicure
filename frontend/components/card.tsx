@@ -1,7 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import { CardProps } from "@/types/card";
-import { Rating } from "@/components/ui/rating";
+import { Rating } from "@/components/rating";
 
 export function Card(props: CardProps) {
     return (

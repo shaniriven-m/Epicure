@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { IconButton } from "@/components/ui/icon-button";
+import { IconButton } from "@/components/icon-button";
 import Image from "next/image";
 
 export default function Header() {

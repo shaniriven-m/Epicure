@@ -27,4 +27,4 @@ export type ChefCard = BaseCard & {
     type: "chef";
 };
 
-export type CardProps = RestaurantCard;
+export type CardProps = RestaurantCard |;
