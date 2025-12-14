@@ -23,7 +23,7 @@ const restaurants: RestaurantCard[] = [
         name: "Messa",
         chef: "Aviv Moshe",
         rating: 1,
-        image: "/images/restaurants/Messa.jpg",
+        image: "/images/restaurants/messa-2.jpg",
     },
     {
         id: "r4",
@@ -63,10 +63,10 @@ const restaurants: RestaurantCard[] = [
         name: "Kab Kem",
         chef: "Yariv Malili",
         rating: 1,
-        image: "/images/restaurants/kab-kem-2.jpg",
+        image: "/images/restaurants/kab-kem.jpg",
     },
     {
-        id: "r3",
+        id: "r9",
         type: "restaurant",
         name: "Messa",
         chef: "Aviv Moshe",
