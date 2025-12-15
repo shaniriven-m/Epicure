@@ -29,21 +29,42 @@
   }
 
   h1 {
-    @apply text-[32px] font-thin text-primary;
+    @apply text-[24px]/[32px] font-[200] tracking-[1.97px] text-primary;
   }
 
   h2 {
-    @apply text-[16px]/[35px] font-[200] tracking-[1.25px] uppercase text-primary;
+    @apply text-[16px]/[24px] font-[200] tracking-[1.25px] uppercase text-primary;
   }
 
   h3 {
-    @apply text-[40px] font-normal text-primary;
+    @apply text-[18px] font-[400] tracking-[2.67px] text-primary;
   }
 
   h4 {
     @apply text-[18px] font-extralight text-primary;
   }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 1.25px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
 }
+
+
 
 @layer components {
   .text-header {
@@ -55,7 +76,7 @@
   }
 
   .text-footer-links {
-    @apply text-[18px]/[22px] font-[200] tracking-[1.92px] text-primary;
+    @apply text-[18px] font-[200] tracking-[1.92px] text-primary;
   }
 }
 

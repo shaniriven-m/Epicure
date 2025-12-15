@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { IconButton } from "@/components/ui/icon-button";
 import Image from "next/image";
-import FooterLinks from "@/components/footer-links"
+import FooterLinks from "@/components/footer/footer-links"
 
 
 export default function Header() {
