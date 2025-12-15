@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { IconButton } from "@/components/ui/icon-button";
 import Image from "next/image";
-import Footer from "./footer";
+import FooterLinks from "@/components/footer-links"
+
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,7 +92,7 @@ export default function Header() {
                             Chefs
                         </Link>
                     </nav>
-                    <Footer />
+                    <FooterLinks />
                 </div>
             )}
         </header>

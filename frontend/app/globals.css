@@ -14,7 +14,7 @@
   --color-secondary-200: #E19D1A;
   --color-secondary-300: #FAFAFA;
 
-  --font-helvetica-neue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-helvetica-neue: "Helvetica Neue";
 }
 
 @theme inline {
@@ -33,7 +33,7 @@
   }
 
   h2 {
-    @apply text-[30px] font-thin text-primary;
+    @apply text-[16px]/[35px] font-[200] tracking-[1.25px] uppercase text-primary;
   }
 
   h3 {
@@ -51,7 +51,11 @@
   }
 
   .text-footer {
-    @apply text-[18px] font-extralight text-primary;
+    @apply text-[18px]/[28px] font-[200] tracking-[2.14px] text-primary;
+  }
+
+  .text-footer-links {
+    @apply text-[18px]/[22px] font-[200] tracking-[1.92px] text-primary;
   }
 }
 
