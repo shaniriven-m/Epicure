@@ -33,11 +33,11 @@
   }
 
   h2 {
-    @apply text-[16px] font-thin text-primary;
+    @apply text-[16px]/[20px] font-[200] tracking-[1.97px] text-primary;
   }
 
   h3 {
-    @apply text-[18px] font-normal text-primary tracking-[2.67px];
+    @apply text-[18px] font-[400] text-primary tracking-[2.67px];
   }
 
   h4 {
