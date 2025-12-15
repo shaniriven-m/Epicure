@@ -1,6 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonProps } from "@/types/icons";
+import { ButtonHTMLAttributes, ReactNode } from "react";
+
+
+type IconType = ReactNode | { src: string; width?: number; height?: number };
+
+type ButtonProps = {
+  children?: ReactNode;
+  icon?: IconType;
+  iconPosition?: "left" | "right";
+  ariaLabel?: string;
+  className?: string;
+  href?: string;
+} & Pick<ButtonHTMLAttributes<HTMLButtonElement>, "onClick" | "type">;
+
 
 
 export function IconButton({

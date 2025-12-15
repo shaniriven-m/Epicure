@@ -1,6 +1,9 @@
 import clsx from "clsx";
-import { RatingProps } from "@/types/card";
 
+type RatingProps = {
+    value: number;
+    max?: number;
+};
 
 export function Rating({ value, max = 5 }: RatingProps) {
     return (
