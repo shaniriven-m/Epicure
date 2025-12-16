@@ -1,8 +1,11 @@
+import Hero from "@/components/hero"
 
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div className="w-full">
+      <Hero />
+    </div >
   )
 }
 
