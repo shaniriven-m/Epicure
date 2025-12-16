@@ -7,12 +7,12 @@ enum StorePlatform {
 }
 
 const STORE_CONFIG = {
-    google: {
+    [StorePlatform.GOOGLE]: {
         src: "/icons/google-play.png",
         alt: "Get it on Google Play",
         href: "",
     },
-    apple: {
+    [StorePlatform.APPLE]: {
         src: "/icons/app-store.png",
         alt: "Download on the App Store",
         href: "",
