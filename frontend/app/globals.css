@@ -9,12 +9,13 @@
 @theme {
   --color-primary: #000000;
   --color-primary-100: #979797;
+  --color-primary-200: #F2F2F2;
   --color-secondary-100: #F9F4EA;
   --color-secondary-200: #E19D1A;
   --color-secondary-300: #FAFAFA;
-  --font-helvetica-neue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --color-white: #FFFFFF;
 
+  --font-helvetica-neue: "Helvetica Neue";
+  --color-white: #FFFFFF;
 }
 
 @theme inline {
@@ -30,24 +31,54 @@
 
   h1 {
     @apply text-[24px]/[32px] font-[200] tracking-[1.97px] text-primary;
+    @apply text-[24px]/[32px] font-[200] tracking-[1.97px] text-primary;
   }
 
   h2 {
-    @apply text-[30px] font-thin text-primary;
+    @apply text-[16px]/[24px] font-[200] tracking-[1.25px] uppercase text-primary;
   }
 
   h3 {
-    @apply text-[40px] font-normal text-primary;
+    @apply text-[18px] font-[400] tracking-[2.67px] text-primary;
   }
 
   h4 {
     @apply text-[18px] font-extralight text-primary;
   }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 1.25px;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
 }
+
+
 
 @layer components {
   .text-header {
     @apply text-[18px] font-extralight text-primary;
+  }
+
+  .text-footer {
+    @apply text-[18px]/[28px] font-[200] tracking-[2.14px] text-primary;
+  }
+
+  .text-footer-links {
+    @apply text-[18px] font-[200] tracking-[1.92px] text-primary;
   }
 
   .text-input {
