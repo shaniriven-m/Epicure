@@ -31,7 +31,6 @@
 
   h1 {
     @apply text-[24px]/[32px] font-[200] tracking-[1.97px] text-primary;
-    @apply text-[24px]/[32px] font-[200] tracking-[1.97px] text-primary;
   }
 
   h2 {
@@ -42,9 +41,6 @@
     @apply text-[18px] font-[400] tracking-[2.67px] text-primary;
   }
 
-  h4 {
-    @apply text-[18px] font-extralight text-primary;
-  }
 
   @media (min-width: 768px) {
     h1 {
