@@ -55,7 +55,7 @@
   }
 
   .text-body {
-    @apply text-base text-[16px] font-thin text-primary;
+    @apply text-base text-[16px]/[20px] font-[200] tracking-[1.97px] text-primary;
   }
 }
 

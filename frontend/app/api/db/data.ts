@@ -82,7 +82,7 @@ export const dishes: CardProps[] = [
         id: "d1",
         type: "dish",
         name: "Pad Ki Mao",
-        image: "/images/dishes/pad-ki-mao.png",
+        image: "/images/dishes/pad-ki-mao.jpg",
         description: "Green Papaya, Mango, Chukka Chili, Mint, Kaffir lime, Cashew, Akaya Cham sauce",
         price: 88,
         icons: ["vegan", "spicy"],
