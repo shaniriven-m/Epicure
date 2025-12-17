@@ -1,10 +1,9 @@
+import TextButton from "@/components/text-button"
 
 
 const HomePage = () => {
   return (
-
-    <div>HomePage</div>
-
+    <div className="p-4"><TextButton label={"All Restaurants"} /></div>
   )
 }
 
