@@ -1,4 +1,4 @@
-import { CardProps } from "@/components/card";
+import { CardProps } from "@/components/card/card";
 
 
 export const restaurants: CardProps[] = [

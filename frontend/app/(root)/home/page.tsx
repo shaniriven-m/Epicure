@@ -1,5 +1,5 @@
 import { fetchChefs, fetchDishes, fetchRestaurants } from "@/lib/api/fetch-api";
-import { Card } from "@/components/card";
+import { Card } from "@/components/card/card";
 
 const HomePage = async () => {
   const restaurants = await fetchRestaurants();

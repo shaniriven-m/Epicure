@@ -79,6 +79,11 @@
   .text-footer-links {
     @apply text-[18px] font-[200] tracking-[1.92px] text-primary;
   }
+
+  .text-card {
+    @apply text-[16px]/[20px] font-[200] tracking-[1.97px] capitalize text-primary md:text-[24px]/[30px];
+  }
+
 }
 
 body {
