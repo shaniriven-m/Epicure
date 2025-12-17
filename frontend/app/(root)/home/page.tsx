@@ -8,6 +8,7 @@ const HomePage = async () => {
 
   const rest = restaurants[0];
   const dish = dishes[0];
+  const dish1 = dishes[1];
   // const chef = chefs[0];
 
   return (
@@ -17,6 +18,7 @@ const HomePage = async () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card key={rest.id} {...rest} />
         <Card key={dish.id} {...dish} />
+        <Card key={dish1.id} {...dish1} showIcons={true} />
         {/* <Card key={chef.id} {...chef} /> */}
       </div>
     </div>
