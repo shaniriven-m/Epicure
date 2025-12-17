@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { IconButton } from "@/components/icon-button";
 import Image from "next/image";
+import FooterLinks from "@/components/footer/footer-links"
+
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,8 +35,13 @@ export default function Header() {
                             EPICURE
                         </Link>
 
-                        <Link href="/restaurants" className="text-header"> Restaurants</Link>
-                        <Link href="/chefs" className="text-header">Chefs</Link>
+                        <Link href="/restaurants" className="text-header">
+                            Restaurants
+                        </Link>
+
+                        <Link href="/chefs" className="text-header">
+                            Chefs
+                        </Link>
                     </div>
                 </div>
 
@@ -76,6 +83,7 @@ export default function Header() {
                             Chefs
                         </Link>
                     </nav>
+                    <FooterLinks />
                 </div>
             )}
         </header>
