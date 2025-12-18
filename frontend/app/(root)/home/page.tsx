@@ -4,12 +4,12 @@ import { Card } from "@/components/card/card";
 const HomePage = async () => {
   const restaurants = await fetchRestaurants();
   const dishes = await fetchDishes();
-  // const chefs = await fetchChefs();
+  const chefs = await fetchChefs();
 
   const rest = restaurants[0];
   const dish = dishes[0];
   const dish1 = dishes[1];
-  // const chef = chefs[0];
+  const chef = chefs[0];
 
   return (
     <div>
@@ -19,7 +19,7 @@ const HomePage = async () => {
         <Card key={rest.id} {...rest} />
         <Card key={dish.id} {...dish} />
         <Card key={dish1.id} {...dish1} showIcons={true} />
-        {/* <Card key={chef.id} {...chef} /> */}
+        <Card key={chef.id} {...chef} />
       </div>
     </div>
   );

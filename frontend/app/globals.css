@@ -16,6 +16,7 @@
   --color-rating: #DE9200;
 
   --font-helvetica-neue: "Helvetica Neue";
+  --color-white: #FFFFFF;
 }
 
 @theme inline {
@@ -38,7 +39,7 @@
   }
 
   h3 {
-    @apply text-[18px] font-[400] tracking-[2.67px] text-primary;
+    @apply text-[24px]/[47px] font-[400] tracking-[2.67px] text-primary;
   }
 
   h4 {
