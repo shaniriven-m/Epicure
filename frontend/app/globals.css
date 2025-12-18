@@ -15,6 +15,11 @@
   --color-secondary-300: #FAFAFA;
 
   --font-helvetica-neue: "Helvetica Neue";
+
+  --spacing-page-inline: 20px;
+  --spacing-page-inline-md: 70px;
+
+  --shadow-header: 2px 4px 10px 0px #AFAFAF40;
 }
 
 @theme inline {
@@ -75,9 +80,15 @@
     @apply text-[18px]/[28px] font-[200] tracking-[2.14px] text-primary;
   }
 
-  .text-footer-links {
+  .text-nav-links {
     @apply text-[18px] font-[200] tracking-[1.92px] text-primary;
   }
+
+  .text-icon-button-logo {
+    @apply text-[27px] font-[200] tracking-[1.35px] text-primary uppercase;
+  }
+
+
 }
 
 body {
