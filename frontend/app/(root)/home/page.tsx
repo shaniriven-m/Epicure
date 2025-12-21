@@ -1,10 +1,29 @@
-import TextButton from "@/components/text-button"
+import { fetchChefs, fetchDishes, fetchRestaurants } from "@/lib/api/fetch-api";
+import { Card } from "@/components/card/card"; import TextButton from "@/components/text-button"
 
 
-const HomePage = () => {
+const HomePage = async () => {
+  const restaurants = await fetchRestaurants();
+  const dishes = await fetchDishes();
+  const chefs = await fetchChefs();
+
+  const rest = restaurants[0];
+  const dish = dishes[0];
+  const dish1 = dishes[1];
+  const chef = chefs[0];
+
   return (
-    <div className="p-4"><TextButton label={"All Restaurants"} /></div>
-  )
-}
+    <div>
+      <h1>All restaurant details:</h1>
 
-export default HomePage
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card key={rest.id} {...rest} />
+        <Card key={dish.id} {...dish} />
+        <Card key={dish1.id} {...dish1} showIcons={true} />
+        <Card key={chef.id} {...chef} />
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;

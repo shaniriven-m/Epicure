@@ -3,11 +3,15 @@
 import Link from "next/link"
 import clsx from "clsx";
 
+type FooterLinksProps = {
+    className?: string;
+}
 
-export default function FooterLinks() {
+
+export default function FooterLinks({ className }: FooterLinksProps) {
     return (
-        <div className="mx-auto flex items-center px-5 bg-white">
-            <nav className="flex flex-col gap-[40px] px-2 py-8 text-footer-links items-start md:flex-row md:justify-center md:w-full">
+        <div className={clsx("mx-auto flex items-center px-page-inline bg-white", className)}>
+            <nav className="flex flex-col gap-[40px] py-8 text-nav-links items-start md:flex-row md:justify-center md:w-full">
                 <Link href="/contact">Contact Us</Link>
                 <Link href="/terms">Terms Of Use</Link>
                 <Link href="/terms">Privacy Policy</Link>
