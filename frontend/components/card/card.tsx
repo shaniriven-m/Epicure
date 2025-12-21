@@ -21,6 +21,9 @@ export type CardProps = {
     price?: number;
     icons?: IconType[];
     className?: string;
+    classNameImage?: string;
+    classNameText?: string;
+    classNameDescription?: string;
     showIcons?: boolean;
 }
 
@@ -28,7 +31,7 @@ export function Card(props: CardProps) {
     return (
         <article
             className={clsx(
-                "w-[335px]",
+                "w-[245px] flex flex-col",
                 props.type === CardType.RESTAURANT && "md:w-[379px]",
                 props.type === CardType.DISH && "md:w-[272px] md:h-[413px]",
                 props.type == CardType.CHEF && "md:w-[378px]",
@@ -37,10 +40,12 @@ export function Card(props: CardProps) {
 
             <div
                 className={clsx(
-                    "relative w-full h-[207px]",
+                    "relative w-full h-[157px]",
                     props.type === CardType.RESTAURANT && "md:h-[236px]",
                     props.type === CardType.DISH && "md:h-[173px]",
-                    props.type === CardType.CHEF && "h-[337px] md:h-[338px]"
+                    props.type === CardType.CHEF && "h-[337px] md:h-[338px]",
+                    props.classNameImage,
+
                 )}>
 
                 <Image src={props.image} alt={props.name} fill className="object-cover" />
@@ -54,9 +59,9 @@ export function Card(props: CardProps) {
             </div>
 
             {props.type !== CardType.CHEF && (
-                <div className={clsx("px-[16px] py-[16px] bg-secondary-100 space-y-[10px] text-left md:text-center md:space-y-[8px] md:p-[24px] md:pb-[8px]", props.showIcons && "space-y-[8px] md:pb-[8px]")}>
+                <div className={clsx("flex flex-col  px-[16px] py-[16px] bg-secondary-100 text-left md:text-center md:space-y-[8px] md:p-[24px]", props.showIcons && "space-y-[6px] md:pb-[8px]", props.classNameDescription)}>
 
-                    <h3 className={clsx(props.type === CardType.DISH && "md:text-[24px]/[26px]")}>
+                    <h3 className={clsx("text-[18px]/[30px]", props.classNameText, props.type === CardType.DISH && "md:text-[24px]/[26px]")}>
                         {props.name}
                     </h3>
 
@@ -79,7 +84,9 @@ export function Card(props: CardProps) {
                     )}
 
                     {props.price && (
-                        <Price price={props.price} showBar={!props.showIcons} />
+                        <div className="mt-auto">
+                            <Price price={props.price} showBar={!props.showIcons} />
+                        </div>
                     )}
 
                 </div>
