@@ -4,28 +4,29 @@ import clsx from "clsx";
 type TextButtonProps = {
     label: string;
     onClick?: () => void;
+    iconClassName?: string;
 };
 
 export default function TextButton({
     label,
     onClick,
+    iconClassName,
 }: TextButtonProps) {
     return (
         <button
             type="button"
             onClick={onClick}
-            className="flex items-center h-[35px] w-[172px] md:w-[226px]"
+            className="flex items-center gap-[12px]"
         >
             <span className="flex-1 text-button text-left whitespace-nowrap overflow-hidden">{label}</span>
-            <div className="flex items-center h-[36px] w-[35px] justify-end">
+            <div className={clsx("relative inline-flex items-center justify-center aria-hidden w-[24px] h-[24px]", iconClassName)}>
                 <Image
                     src="/icons/arrow.svg"
-                    alt=""
-                    aria-hidden
-                    width={24}
-                    height={24}
+                    alt="arrow"
+                    fill
+                    className="object-contain"
                 />
             </div>
-        </button>
+        </button >
     );
 }

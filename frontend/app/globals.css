@@ -90,12 +90,9 @@
     @apply text-[16px]/[20px] font-[200] tracking-[1.97px] capitalize text-primary md:text-[24px]/[30px];
   }
 
-
   .text-icon-button-logo {
     @apply text-[27px] font-[200] tracking-[1.35px] text-primary uppercase;
   }
-
-
 
   .text-section-title {
     @apply text-[18px]/[24px] font-[200] tracking-[1.25px] text-primary;

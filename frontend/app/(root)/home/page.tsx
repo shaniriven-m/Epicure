@@ -1,6 +1,6 @@
 import { fetchChefs, fetchDishes, fetchRestaurants } from "@/lib/api/fetch-api";
-import { Card } from "@/components/card/card"; import TextButton from "@/components/text-button"
-
+import { Card } from "@/components/card/card";
+import TextButton from "@/components/text-button";
 
 const HomePage = async () => {
   const restaurants = await fetchRestaurants();
@@ -15,7 +15,7 @@ const HomePage = async () => {
   return (
     <div>
       <h1>All restaurant details:</h1>
-
+      <TextButton label={"hey"} />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card key={rest.id} {...rest} />
         <Card key={dish.id} {...dish} />
