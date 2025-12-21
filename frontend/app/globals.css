@@ -47,9 +47,6 @@
     @apply text-[24px]/[47px] font-[400] tracking-[2.67px] text-primary;
   }
 
-  h4 {
-    @apply text-[18px] font-extralight text-primary;
-  }
 
   @media (min-width: 768px) {
     h1 {
@@ -100,6 +97,10 @@
 
   .text-button {
     @apply text-[16px]/[35px] font-[400] tracking-[2px] capitalize text-primary md:text-[24px]/[35px];
+  }
+
+  .text-input {
+    @apply text-[12px] font-[200] tracking-[1.29px] text-primary md:text-[24px];
   }
 }
 

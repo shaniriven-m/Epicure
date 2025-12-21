@@ -1,6 +1,6 @@
 import { fetchChefs, fetchDishes, fetchRestaurants } from "@/lib/api/fetch-api";
 import { Card } from "@/components/card/card";
-import TextButton from "@/components/text-button";
+import TextButton from "@/components/text-button"; import Hero from "@/components/hero"
 
 const HomePage = async () => {
   const restaurants = await fetchRestaurants();
@@ -13,17 +13,10 @@ const HomePage = async () => {
   const chef = chefs[0];
 
   return (
-    <div>
-      <h1>All restaurant details:</h1>
-      <TextButton label={"hey"} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card key={rest.id} {...rest} />
-        <Card key={dish.id} {...dish} />
-        <Card key={dish1.id} {...dish1} showIcons={true} />
-        <Card key={chef.id} {...chef} />
-      </div>
-    </div>
-  );
-};
+    <div className="w-full">
+      <Hero title={"Epicure works with the top \n chef restaurants in Tel Aviv"} imageSrc={"/images/hero-food.png"} />
+    </div >
+  )
+}
 
 export default HomePage;
