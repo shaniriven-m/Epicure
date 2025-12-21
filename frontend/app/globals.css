@@ -13,9 +13,15 @@
   --color-secondary-100: #F9F4EA;
   --color-secondary-200: #E19D1A;
   --color-secondary-300: #FAFAFA;
+  --color-rating: #DE9200;
 
   --font-helvetica-neue: "Helvetica Neue";
   --color-white: #FFFFFF;
+
+  --spacing-page-inline: 20px;
+  --spacing-page-inline-md: 70px;
+
+  --shadow-header: 2px 4px 10px 0px #AFAFAF40;
 }
 
 @theme inline {
@@ -38,7 +44,7 @@
   }
 
   h3 {
-    @apply text-[18px] font-[400] tracking-[2.67px] text-primary;
+    @apply text-[24px]/[47px] font-[400] tracking-[2.67px] text-primary;
   }
 
 
@@ -73,8 +79,24 @@
     @apply text-[18px]/[28px] font-[200] tracking-[2.14px] text-primary;
   }
 
-  .text-footer-links {
+  .text-nav-links {
     @apply text-[18px] font-[200] tracking-[1.92px] text-primary;
+  }
+
+  .text-card {
+    @apply text-[16px]/[20px] font-[200] tracking-[1.97px] capitalize text-primary md:text-[24px]/[30px];
+  }
+
+  .text-icon-button-logo {
+    @apply text-[27px] font-[200] tracking-[1.35px] text-primary uppercase;
+  }
+
+  .text-section-title {
+    @apply text-[18px]/[24px] font-[200] tracking-[1.25px] text-primary;
+  }
+
+  .text-button {
+    @apply text-[16px]/[35px] font-[400] tracking-[2px] capitalize text-primary md:text-[24px]/[35px];
   }
 
   .text-input {
