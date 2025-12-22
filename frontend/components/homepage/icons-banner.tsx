@@ -1,11 +1,11 @@
-import DishCardIcons, { IconType } from "./card/dish-card-icons";
+
 import Image
     from "next/image";
 export default function IconsBanner() {
     return (
         <div className="flex flex-col items-center justify-start gap-[32px] bg-secondary-300 py-[39px]">
 
-            <h2 className="text-section-title " >
+            <h2 className="text-section-title uppercase" >
                 The meaning of our icons:
             </h2>
 

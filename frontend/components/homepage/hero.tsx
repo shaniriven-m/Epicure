@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SearchBox from "./search-box";
+import SearchBox from "../search-box";
 
 type HeroProps = {
     title: string;

@@ -62,18 +62,18 @@ export const restaurants: CardProps[] = [
     {
         id: "r8",
         type: CardType.RESTAURANT,
-        name: "Kab Kem",
-        chef: "Yariv Malili",
+        name: "Kitchen Market",
+        chef: "Yossi Shitrit",
         rating: 1,
-        image: "/images/restaurants/kab-kem.jpg",
+        image: "/images/restaurants/kitchen-market-1.png",
     },
     {
         id: "r9",
         type: CardType.RESTAURANT,
-        name: "Messa",
-        chef: "Aviv Moshe",
+        name: "Onza",
+        chef: "Yossi Shitrit",
         rating: 1,
-        image: "/images/restaurants/messa-2.jpg",
+        image: "/images/restaurants/pad-ki-mao.jpg",
     },
 ];
 
@@ -101,7 +101,7 @@ export const dishes: CardProps[] = [
         id: "d3",
         type: CardType.DISH,
         name: "Red Farm",
-        image: "/images/dishes/red-farm.jpg",
+        image: "/images/dishes/red-farm-2.png",
         description: "Tofu, Spekkoek Peanuts, Spicy Manis, Pear Yakitori",
         price: 98,
         icons: [IconType.VEGETARIAN, IconType.VEGAN],
@@ -196,7 +196,7 @@ export const chefs: CardProps[] = [
         type: CardType.CHEF,
         name: "Yossi Shitrit",
         image: "/images/chefs/yossi-shitrit.png",
-        description: "Modern Tel Aviv cuisine",
+        description: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
     },
     {
         id: "c5",

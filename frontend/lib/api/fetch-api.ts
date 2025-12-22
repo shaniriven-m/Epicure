@@ -1,4 +1,4 @@
-import { CardType } from "@/components/card/card";
+import { CardProps, CardType } from "@/components/card/card";
 
 export async function fetchRestaurants() {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -62,4 +62,26 @@ export async function fetchTopRated(type: CardType, number = 5) {
             throw new Error(`Unsupported type: ${type}`);
         }
     }
+}
+
+export async function fetchChefOfTheWeek(name: string) {
+    const chefs = await fetchChefs();
+    const chefOfTheWeek = chefs.find(
+        (chef: CardProps) => chef.name === name
+    );
+
+    if (!chefOfTheWeek) {
+        throw new Error("Chef of the week not found");
+    }
+
+    return chefOfTheWeek;
+}
+
+export async function fetchRestaurantsByChef(name: string) {
+    const restaurants = await fetchRestaurants();
+    const restaurantsOfChef = restaurants.filter(
+        (restaurant: CardProps) => restaurant.chef === name
+    );
+    return restaurantsOfChef;
+
 }
