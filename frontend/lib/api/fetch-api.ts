@@ -64,10 +64,10 @@ export async function fetchTopRated(type: CardType, number = 5) {
     }
 }
 
-export async function fetchChefOfTheWeek(name: string) {
+export async function fetchChefOfTheWeek(id: string) {
     const chefs = await fetchChefs();
     const chefOfTheWeek = chefs.find(
-        (chef: CardProps) => chef.name === name
+        (chef: CardProps) => chef.id === id
     );
 
     if (!chefOfTheWeek) {
@@ -77,11 +77,10 @@ export async function fetchChefOfTheWeek(name: string) {
     return chefOfTheWeek;
 }
 
-export async function fetchRestaurantsByChef(name: string) {
+export async function fetchRestaurantsByChef(chef_id: string) {
     const restaurants = await fetchRestaurants();
     const restaurantsOfChef = restaurants.filter(
-        (restaurant: CardProps) => restaurant.chef === name
+        (restaurant: CardProps) => restaurant.chef_id === chef_id
     );
     return restaurantsOfChef;
-
 }

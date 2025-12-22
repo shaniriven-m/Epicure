@@ -16,6 +16,7 @@ export type CardProps = {
     name: string,
     type: CardType,
     chef?: string;
+    chef_id?: string;
     rating?: number, // desktop restaurant card only
     description?: string;
     price?: number;

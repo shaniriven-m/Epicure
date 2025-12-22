@@ -8,7 +8,7 @@ import ChefOfTheWeek from "@/components/homepage/chef-banner";
 const HomePage = async () => {
   const topRestaurants = await fetchTopRated(CardType.RESTAURANT);
   const topDishes = await fetchTopRated(CardType.DISH);
-  const chefOfTheWeek = await fetchChefOfTheWeek("Yossi Shitrit");
+  const chefOfTheWeek = await fetchChefOfTheWeek("c4");
 
 
   return (
@@ -17,7 +17,6 @@ const HomePage = async () => {
       <Hero title={"Epicure works with the top \n chef restaurants in Tel Aviv"} imageSrc={"/images/hero-food.png"} />
 
       <section className="flex-col pl-page-inline pb-section-homepage space-y-3 md:px-page-inline-md md:space-y-[40px] md:px-page-inline-md md:pb-[48px]">
-
         <h2 className="text-section-title uppercase pt-section-homepage whitespace-nowrap" >
           Popular restaurants in epicure:
         </h2>

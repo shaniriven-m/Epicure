@@ -4,7 +4,7 @@ import { CardsSwiper } from "./card-swiper";
 
 
 export default async function ChefOfTheWeek(chefCard: CardProps) {
-    const restaurants = await fetchRestaurantsByChef(chefCard.name);
+    const restaurants = await fetchRestaurantsByChef(chefCard.id);
 
     return (
         <div className="flex flex-col space-y-5 sm:space-y-[45px]">
@@ -13,7 +13,7 @@ export default async function ChefOfTheWeek(chefCard: CardProps) {
 
             <div className="flex flex-col gap-[24px] sm:flex-1 sm:flex-row sm:space-x-[40px]">
                 <Card {...chefCard} className="w-full sm:h-[372px] md:w-[478px]" classNameText="text-[18px]/[47px] md:text-[40px]/[47px]" classNameImage="md:h-[372px]" />
-                <p className="text-section-title text-[18px]/[28px] md:flex-1 md:text-left md:text-[24px]/[35px] md:pt-[20px]">
+                <p className="text-section-title normal-case text-[18px]/[28px] md:flex-1 md:text-left md:text-[24px]/[35px] md:pt-[20px]">
                     {chefCard.description}
                 </p>
             </div>
