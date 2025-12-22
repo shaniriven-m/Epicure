@@ -49,7 +49,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="relative w-full ">
+        <header className="relative w-full md:border md:border-primary-200">
             <div className="flex items-center px-page-inline h-[46px] md:h-[64px] md:px-page-inline-md">
                 <TopNav setIsMenuOpen={setIsMenuOpen} />
                 <IconButtonGroup icons={[HeaderActionButtons.SEARCH, HeaderActionButtons.USER, HeaderActionButtons.BAG]} />

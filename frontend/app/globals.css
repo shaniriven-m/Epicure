@@ -18,9 +18,13 @@
   --font-helvetica-neue: "Helvetica Neue";
   --color-white: #FFFFFF;
 
+  --spacing-column: 10px;
   --spacing-page-inline: 20px;
   --spacing-page-inline-md: 70px;
-
+  --spacing-section-homepage: 32px;
+  --spacing-section-homepage-md: 48px;
+  --spacing-page-top: 5px;
+  --spacing-page-bottom: 60px;
   --shadow-header: 2px 4px 10px 0px #AFAFAF40;
 }
 
