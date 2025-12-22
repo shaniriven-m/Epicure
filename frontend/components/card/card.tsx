@@ -51,7 +51,7 @@ export function Card(props: CardProps) {
 
                 <Image src={props.image} alt={props.name} fill className="object-cover" />
                 {props.type === CardType.CHEF && (
-                    <div className="absolute bottom-0 left-0 w-full h-[51px] bg-white/[0.75] backdrop-blur-[0px] flex items-center justify-center">
+                    <div className="absolute bottom-0 left-0 w-full h-[51px] bg-white/[0.75] backdrop-blur-[0px] flex items-center justify-center md:h-[78px]">
                         <h3 className={clsx("text-center", props.classNameText)}>
                             {props.name}
                         </h3>
@@ -66,12 +66,21 @@ export function Card(props: CardProps) {
                         {props.name}
                     </h3>
 
-                    {props.description && (
-                        <h2 className={clsx("text-card", props.type === CardType.DISH && "md:text-[20px]/[24px]")}>
-                            {props.description}
-                        </h2>
-                    )}
+                    <div className="flex flex-col md:gap-[12px]">
+                        {props.description && (
+                            <div className="h-[90px] order-1 md:order-2">
+                                <h2 className={clsx("text-card", props.type === CardType.DISH && "md:text-[20px]/[24px]")}>
+                                    {props.description}
+                                </h2>
+                            </div>
+                        )}
 
+                        {props.showIcons && props.icons && (
+                            <div className="order-2 md:order-1">
+                                <DishCardIcons icons={props.icons} />
+                            </div>
+                        )}
+                    </div>
                     {props.chef && props.showRating && (
                         <h2 className="text-card mb-0 md:mb-[8px]">{props.chef}</h2>
                     )}
@@ -80,9 +89,6 @@ export function Card(props: CardProps) {
                         <Rating value={props.rating} />
                     )}
 
-                    {props.showIcons && props.icons && (
-                        <DishCardIcons icons={props.icons} />
-                    )}
 
                     {props.price && (
                         <div className="mt-auto">

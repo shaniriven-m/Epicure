@@ -19,7 +19,7 @@
   --color-white: #FFFFFF;
 
   --spacing-page-inline: 20px;
-  --spacing-page-inline-md: 70px;
+  --spacing-page-inline-md: 130px;
   --spacing-section-homepage: 32px;
   --spacing-section-homepage-md: 48px;
 
@@ -95,7 +95,7 @@
   }
 
   .text-section-title {
-    @apply text-[18px]/[24px] font-[200] capitalize tracking-[1.25px] text-primary md:text-[30px]/[35px];
+    @apply text-[18px]/[24px] font-[200] uppercase tracking-[1.25px] text-primary md:text-[30px]/[35px];
   }
 
   .text-button {

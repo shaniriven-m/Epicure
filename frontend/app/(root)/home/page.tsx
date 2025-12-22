@@ -10,18 +10,15 @@ const HomePage = async () => {
   const topDishes = await fetchTopRated(CardType.DISH);
   const chefOfTheWeek = await fetchChefOfTheWeek("Yossi Shitrit");
 
-  const rest = topRestaurants[0];
-  const dish = topDishes[0];
-
 
   return (
     <div className="w-full pb-section-homepage">
 
       <Hero title={"Epicure works with the top \n chef restaurants in Tel Aviv"} imageSrc={"/images/hero-food.png"} />
 
-      <section className="flex-col p-page-inline pb-section-homepage space-y-3 md:px-page-inline-md md:space-y-[40px] md:px-page-inline-md md:pb-[48px]">
+      <section className="flex-col pl-page-inline pb-section-homepage space-y-3 md:px-page-inline-md md:space-y-[40px] md:px-page-inline-md md:pb-[48px]">
 
-        <h2 className="text-section-title uppercase pt-section-homepage" >
+        <h2 className="text-section-title uppercase pt-section-homepage whitespace-nowrap" >
           Popular restaurants in epicure:
         </h2>
         <CardsSwiper cards={topRestaurants} showRating={true} className="md:w-[379px]" classNameImage="md:h-[236px]" classNameText="text-[18px] md:text-[40px]/[47px]" />
@@ -51,7 +48,3 @@ const HomePage = async () => {
 }
 
 export default HomePage;
-
-
-{/* <Card {...rest} className="w-[335px]" imageHightClassName="h-[207px]" descriptionClassName="px-[16px] py-[16px] space-y-[10px]" />
-<Card {...dish} className="w-[335px]" imageHightClassName="h-[207px]" descriptionClassName="px-[16px] py-[16px] space-y-[10px]" /> */}
