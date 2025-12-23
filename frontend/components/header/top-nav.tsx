@@ -33,8 +33,6 @@ export default function TopNav({ setIsMenuOpen }: TopNavProps) {
                         <span className="text-icon-button-logo">EPICURE</span>
                     </IconButton>
 
-                    {/* <Link href="/restaurants" className="text-nav-links">Restaurants</Link>
-                    <Link href="/chefs" className="text-nav-links">Chefs</Link> */}
                     <Link href="/restaurants" className={navLinkClassName("/restaurants")}>
                         Restaurants
                     </Link>
