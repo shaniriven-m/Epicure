@@ -2,18 +2,19 @@
 
 import { useState } from "react";
 import { Card, CardProps } from "../card/card";
-import { FilterID, FilterOptions, AdvancedFilterOptions } from "./filter-constants";
+import { FilterID, FilterOptions, CustomFilterOptions } from "./filter-constants";
 import FilterBar from "./filter-bar";
-import AdvancedFilterBar from "./advanced-filter-bar";
+import CustomFilterBar from "./custom-filter-bar";
 
 type FilterSectionProps = {
     cards: CardProps[];
     filters: FilterOptions[];
-    advancedFilters?: AdvancedFilterOptions[];
+    advancedFilters?: CustomFilterOptions[];
 }
 
 export default function FilterSection({ cards, filters, advancedFilters }: FilterSectionProps) {
     const [activeFilter, setActiveFilter] = useState<FilterID>(FilterID.ALL);
+
 
     const [priceRange, setPriceRange] = useState<[number, number] | null>(null);
     const [distanceRange, setDistanceRange] = useState<[number, number] | null>(null);
@@ -31,7 +32,7 @@ export default function FilterSection({ cards, filters, advancedFilters }: Filte
             />
 
             {advancedFilters &&
-                <AdvancedFilterBar
+                <CustomFilterBar
                     filters={advancedFilters}
                     onPriceChange={setPriceRange}
                     onDistanceChange={setDistanceRange}

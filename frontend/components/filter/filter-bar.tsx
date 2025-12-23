@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { FilterID, FilterOptions, AdvancedFilterID } from "./filter-constants";
+import { FilterID, FilterOptions, CustomFilterID } from "./filter-constants";
 
 type FilterBarProps = {
     activeFilter: FilterID;

@@ -6,7 +6,7 @@ export enum FilterID {
     MAP_VIEW = "map",
 }
 
-export enum AdvancedFilterID {
+export enum CustomFilterID {
     PRICE = "price",
     DISTANCE = "distance",
     RATING = "rating",
@@ -19,11 +19,13 @@ export type FilterOptions = {
     className?: string;
 }
 
-export type AdvancedFilterOptions = {
-    id: AdvancedFilterID;
+export type CustomFilterOptions = {
+    id: CustomFilterID;
     label: string;
+    title: string;
     min_value: number;
     max_value: number;
+    step?: number;
     className?: string;
 }
 
@@ -35,8 +37,8 @@ export const FILTERS_RESTAURANTS: FilterOptions[] = [
     { id: FilterID.MAP_VIEW, label: "Map View", className: "hidden md:flex" }
 ]
 
-export const ADVANCED_FILTERS_RESTAURANTS: AdvancedFilterOptions[] = [
-    { id: AdvancedFilterID.PRICE, label: "price range", min_value: 12, max_value: 357 },
-    { id: AdvancedFilterID.DISTANCE, label: "distance", min_value: 0, max_value: 4 },
-    { id: AdvancedFilterID.RATING, label: "rating", min_value: 1, max_value: 5 },
+export const ADVANCED_FILTERS_RESTAURANTS: CustomFilterOptions[] = [
+    { id: CustomFilterID.PRICE, label: "price range", title: "price range selected", min_value: 12, max_value: 357, step: 1 },
+    { id: CustomFilterID.DISTANCE, label: "distance", title: "distance", min_value: 0, max_value: 4, step: 0.25 },
+    { id: CustomFilterID.RATING, label: "rating", title: "rating", min_value: 1, max_value: 5 },
 ]
