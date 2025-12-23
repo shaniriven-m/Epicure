@@ -55,7 +55,7 @@ export function Card(props: CardProps) {
             </div>
 
             {props.type !== CardType.CHEF && (
-                <div className={clsx("px-[16px] py-[10px] bg-secondary-100 gap-[10px] text-left md:text-center md:space-y-[8px] md:p-[24px] md:pb-[8px]", props.showIcons && "space-y-[8px] md:pb-[8px]")}>
+                <div className={clsx("px-[16px] py-[10px] bg-secondary-100 gap-[10px] text-left md:text-center md:space-y-[8px] md:p-[24px] md:pb-[12px]", props.showIcons && "space-y-[8px] md:pb-[8px]")}>
 
                     <h3 className={clsx(props.type === CardType.DISH && "md:text-[24px]/[26px]", props.titleClassName)}>
                         {props.name}

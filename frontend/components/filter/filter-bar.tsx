@@ -1,12 +1,12 @@
 "use client";
 
 import clsx from "clsx";
-import { FilterID, FilterOptions } from "./filter-constants";
+import { FilterID, FilterOptions, AdvancedFilterID } from "./filter-constants";
 
 type FilterBarProps = {
     activeFilter: FilterID;
     filters: FilterOptions[];
-    onChange?: (id: FilterID) => void;
+    onChange: (id: FilterID) => void;
     className?: string;
 }
 
@@ -20,12 +20,13 @@ export default function FilterBar({ onChange, ...props }: FilterBarProps) {
                     onClick={() => onChange?.(filter.id)}
                     className={clsx(
                         "whitespace-nowrap transition-all text-nav-links",
-                        props.activeFilter === filter.id && "relative font-[400] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-rating"
+                        props.activeFilter === filter.id && "relative font-[400] after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-rating", filter.className
 
                     )}
                     aria-pressed={props.activeFilter === filter.id}
                 >
                     {filter.label}
+
                 </button>
             ))}
         </div>
