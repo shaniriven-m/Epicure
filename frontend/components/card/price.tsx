@@ -13,7 +13,7 @@ export default function Price({ price, showBar = true }: PriceProps) {
             <div className="hidden md:block flex-1 h-[0.5px] bg-primary-100" />
 
             <div className="flex items-end gap-[2px] py-[2px] md:gap-[4px]">
-                <div className="relative w-[7px] h-[7px] mb-[2px] md:w-[10px] md:h-[10px] md:mb-[6px]">
+                <div className="relative w-[7px] h-[7px] mb-[2px] md:w-[12px] md:h-[12px] md:mb-[8px]">
                     <Image
                         src="/icons/nis.svg"
                         alt="NIS"
@@ -21,7 +21,7 @@ export default function Price({ price, showBar = true }: PriceProps) {
                         className="object-contain"
                     />
                 </div>
-                <span className="text-[16px]/[19px] font-[400] tracking-[1.97px] text-primary md:text-[20px]/[30px]">
+                <span className="text-[16px]/[19px] font-[400] tracking-[1.97px] text-primary md:text-[24px]/[30px] md:font-[200] md:pb-[4px]">
                     {price}
                 </span>
             </div>

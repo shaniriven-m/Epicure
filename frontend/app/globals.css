@@ -14,16 +14,21 @@
   --color-secondary-200: #E19D1A;
   --color-secondary-300: #FAFAFA;
   --color-rating: #DE9200;
+  --color-button-active: #D0CFCF;
+  --color-range: #F9F4EA;
+  --color-range-locked-dot: #C8C5C0;
 
   --font-helvetica-neue: "Helvetica Neue";
   --color-white: #FFFFFF;
 
+  --spacing-column: 10px;
   --spacing-page-inline: 20px;
-  --spacing-page-inline-md: 130px;
+  --spacing-page-inline-md: 70px;
+  --spacing-page-swiper-md: 130px;
   --spacing-section-homepage: 32px;
   --spacing-section-homepage-md: 48px;
-
-
+  --spacing-page-top: 5px;
+  --spacing-page-bottom: 60px;
   --shadow-header: 2px 4px 10px 0px #AFAFAF40;
 }
 
@@ -104,6 +109,10 @@
 
   .text-input {
     @apply text-[12px] font-[200] tracking-[1.29px] text-primary md:text-[24px];
+  }
+
+  .text-price-range {
+    @apply text-[14px]/[20px] font-[200] tracking-[1.97px] text-primary;
   }
 }
 

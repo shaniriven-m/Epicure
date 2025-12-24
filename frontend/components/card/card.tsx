@@ -27,6 +27,7 @@ export type CardProps = {
     classNameDescription?: string;
     showIcons?: boolean;
     showRating?: boolean;
+    titleClassName?: string;
 }
 
 export function Card(props: CardProps) {
@@ -63,25 +64,29 @@ export function Card(props: CardProps) {
             {props.type !== CardType.CHEF && (
                 <div className={clsx("flex flex-col px-[16px] py-[14px] bg-secondary-100 text-left md:text-center md:space-y-[8px] md:p-[24px]", props.showIcons && "space-y-[6px] md:pb-[8px]", props.classNameDescription)}>
 
-                    <h3 className={clsx("text-[18px]/[30px]", props.type === CardType.DISH && "md:text-[24px]/[26px]", props.classNameText)}>
+                    <h3 className={clsx("text-[18px]/[30px] pb-[6px] md:pb-[0px]", props.type === CardType.DISH && "md:text-[24px]/[26px]", props.classNameText)}>
                         {props.name}
                     </h3>
 
-                    <div className="flex flex-col md:gap-[12px]">
-                        {props.description && (
+
+                    {props.description && (
+                        <div className="flex flex-col md:gap-[12px]">
                             <div className="h-[90px] order-1 md:order-2">
                                 <h2 className={clsx("text-card", props.type === CardType.DISH && "md:text-[20px]/[24px]")}>
                                     {props.description}
                                 </h2>
                             </div>
-                        )}
+                        </div>
+                    )}
 
-                        {props.showIcons && props.icons && (
+                    {props.showIcons && props.icons && (
+                        <div className="flex flex-col md:gap-[12px]">
                             <div className="order-2 md:order-1">
                                 <DishCardIcons icons={props.icons} />
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
+
                     {props.chef && props.showRating && (
                         <h2 className="text-card mb-0 md:mb-[8px]">{props.chef}</h2>
                     )}

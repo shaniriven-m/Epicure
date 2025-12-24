@@ -24,7 +24,7 @@ export default function SideMenu({ setIsMenuOpen }: SideMenuProps) {
                 </Link>
             </nav>
 
-            <FooterLinks className="border border-primary-200" />
+            <FooterLinks />
         </div>
     )
 }

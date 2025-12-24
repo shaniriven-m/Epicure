@@ -46,7 +46,7 @@ export const restaurants: CardProps[] = [
         chef: "Yanir Green",
         chef_id: "c200",
         rating: 4,
-        image: "/images/restaurants/tiger-lily.jpg",
+        image: "/images/restaurants/nithan-thai.jpg",
     },
     {
         id: "r6",
