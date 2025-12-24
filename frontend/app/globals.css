@@ -24,6 +24,7 @@
   --spacing-column: 10px;
   --spacing-page-inline: 20px;
   --spacing-page-inline-md: 70px;
+  --spacing-page-swiper-md: 130px;
   --spacing-section-homepage: 32px;
   --spacing-section-homepage-md: 48px;
   --spacing-page-top: 5px;
@@ -112,22 +113,6 @@
 
   .text-price-range {
     @apply text-[14px]/[20px] font-[200] tracking-[1.97px] text-primary;
-  }
-
-  .range-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-  }
-
-  .range-thumb::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 23px;
-    height: 23px;
-    border-radius: 9999px;
-    background-color: #000000;
-    cursor: pointer;
   }
 }
 

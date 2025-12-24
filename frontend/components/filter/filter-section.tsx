@@ -20,12 +20,13 @@ export default function FilterSection({ cards, filters, advancedFilters }: Filte
     const [distanceRange, setDistanceRange] = useState<[number, number] | null>(null);
     const [rating, setRating] = useState<number | null>(null);
 
-    const visibleCards = cards;
+    const [visibleCards, setVisibleCards] = useState(cards);
+    // add logic to display cards by activeFilter priceRange/distanceRange/rating
 
     return (
         <div className="space-y-[16px] md:space-y-[36px]">
             <FilterBar
-                className="md:pt-section-homepage"
+                className="pb-[16px] md:pt-section-homepage md:pb-[0px]"
                 activeFilter={activeFilter}
                 filters={filters}
                 onChange={setActiveFilter}
@@ -42,11 +43,19 @@ export default function FilterSection({ cards, filters, advancedFilters }: Filte
 
             <div className="flex justify-center">
                 <div className="grid grid-cols-1 gap-[24px] md:grid-cols-3 md:w-[1184px] ">
+
                     {visibleCards.map((restaurant) => (
                         <div key={restaurant.id} className="flex justify-center">
-                            <Card {...restaurant} className="md:w-[379px]" titleClassName="text-[18px] md:text-[40px]/[47px]" />
+                            <Card {...restaurant}
+                                className="w-[335px] md:w-[379px]"
+                                classNameText="md:text-[40px]/[47px]"
+                                classNameImage="h-[207]"
+                                classNameDescription="gap-[6px] md:gap[0px]"
+                                showRating={true}
+                            />
                         </div>
                     ))}
+
                 </div>
             </div>
         </div>

@@ -9,9 +9,10 @@ type HookArgs = {
     filters: CustomFilterOptions[];
     onPriceChange: (range: [number, number]) => void;
     onDistanceChange: (range: [number, number]) => void;
+    onRatingChange: (rating: number) => void;
 };
 
-export function useCustomFilterState({ filters, onPriceChange, onDistanceChange, }: HookArgs) {
+export function useCustomFilterState({ filters, onPriceChange, onDistanceChange, onRatingChange }: HookArgs) {
     const [openModal, setOpenModal] = useState<CustomFilterID>(
         CustomFilterID.NONE
     );
@@ -29,6 +30,13 @@ export function useCustomFilterState({ filters, onPriceChange, onDistanceChange,
         if (!distanceFilter) return [0, 4];
         return [distanceFilter.min_value, distanceFilter.max_value];
     });
+
+    const [ratingValue, setRatingValue] = useState<number | null>(null);
+
+    const handleRatingChange = (value: number) => {
+        setRatingValue(value);
+        onRatingChange(value);
+    };
 
     const toggle = (type: CustomFilterID) => {
         setOpenModal((prev) => (prev === type ? CustomFilterID.NONE : type));
@@ -76,7 +84,7 @@ export function useCustomFilterState({ filters, onPriceChange, onDistanceChange,
                 lockMinThumb: true,
                 lockedLabel:
                     <div className="flex items-center ml-[32px] pl-[48px]">
-                        <span className="text-price-range whitespace-nowrap"> My location</span>
+                        <span className="text-price-range whitespace-nowrap">My location</span>
                     </div>,
             };
         }
@@ -87,5 +95,7 @@ export function useCustomFilterState({ filters, onPriceChange, onDistanceChange,
         openModal,
         toggle,
         getSliderConfig,
+        ratingValue,
+        handleRatingChange,
     };
 }
